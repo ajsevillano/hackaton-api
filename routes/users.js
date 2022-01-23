@@ -1,9 +1,14 @@
 import express from 'express';
 const router = express.Router();
+import { getAllUsers } from '../models/users.js';
 
-/* GET users listing. */
-router.get('/', function (req, res, next) {
-  res.json({ success: true, payload: 'Users section' });
+// GET ALL USERS
+router.get(`/`, async function (req, res) {
+  const result = await getAllUsers();
+  res.json({
+    success: true,
+    payload: result,
+  });
 });
 
 export default router;
