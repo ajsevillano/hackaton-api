@@ -8,7 +8,8 @@
     "dev": "nodemon -r dotenv/config ./bin/www.js",
     "dbcreateusertable": "node  -r dotenv/config ./db/scripts/createUsersTable.js",
     "dbpopulatetable": "node -r dotenv/config ./db/scripts/populateUsersTable.js",
-    "dbdeletetable": "node -r dotenv/config ./db/scripts/deleteUsersTable.js"
+    "dbdeletetable": "node -r dotenv/config ./db/scripts/deleteUsersTable.js",
+    "dbemptytable": "node -r dotenv/config ./db/scripts/emptyUsersTable.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
