@@ -5,6 +5,7 @@ async function populateUsersTable() {
   for (let index = 0; index < users.length; index++) {
     const { first_name, last_name, email, gender, ip_address } = users[index];
 
+    //Current time when data is added.
     const timestamp = 'now()';
 
     //SQL to populate the table.
