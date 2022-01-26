@@ -1,4 +1,4 @@
-import query from '../index.js';
+import query from '../../index.js';
 
 const truncateQuery = `TRUNCATE TABLE users RESTART IDENTITY`;
 

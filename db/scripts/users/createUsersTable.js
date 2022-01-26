@@ -1,4 +1,4 @@
-import query from '../index.js';
+import query from '../../index.js';
 
 const userQuery = `CREATE TABLE IF NOT EXISTS users(
   id SERIAL PRIMARY KEY,
