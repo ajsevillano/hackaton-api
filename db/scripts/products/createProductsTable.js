@@ -3,10 +3,10 @@ import query from '../../index.js';
 const userQuery = `CREATE TABLE IF NOT EXISTS products(
   id SERIAL PRIMARY KEY,
   name TEXT,
+  description TEXT,
   category TEXT,
-  brand TEXT,
-  status INTEGER,
-  favorite BOOLEAN NOT NULL,
+  price TEXT,
+  img TEXT,
   timestamp TIMESTAMPTZ NOT NULL DEFAULT now()
   )`;
 
