@@ -8,7 +8,7 @@ export async function getAllProducts() {
 }
 
 export async function getMeals() {
-  const data = await query(`SELECT * FROM  products WHERE type="meals";`);
+  const data = await query(`SELECT * FROM  products WHERE category='meals';`);
   return responseHandler(true, data.rows);
 }
 

@@ -1,6 +1,6 @@
 import express from 'express';
 const router = express.Router();
-import { getAllProducts } from '../models/products.js';
+import { getAllProducts, getMeals } from '../models/products.js';
 
 // GET ALL USERS
 router.get(`/`, async function (req, res) {
