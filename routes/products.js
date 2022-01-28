@@ -8,4 +8,9 @@ router.get(`/`, async function (req, res) {
   res.json(result);
 });
 
+router.get(`/meals`, async function (req, res) {
+  const result = await getMeals();
+  res.json(result);
+});
+
 export default router;
