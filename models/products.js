@@ -12,6 +12,11 @@ export async function getMeals() {
   return responseHandler(true, data.rows);
 }
 
+export async function getDrinks() {
+  const data = await query(`SELECT * FROM  products WHERE category='drinks';`);
+  return responseHandler(true, data.rows);
+}
+
 //RESPONSE HANDLER
 function responseHandler(status, statusMsg) {
   return {
