@@ -7,8 +7,6 @@ import cors from 'cors';
 import logger from 'morgan';
 
 //Import routes
-import usersRouter from './routes/users.js';
-import authRouter from './routes/auth.js';
 import productsRouter from './routes/products.js';
 
 //Auth library
@@ -30,8 +28,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 //Routes
-app.use('/users', usersRouter);
-app.use('/auth', authRouter);
 app.use('/products', checkJwt, productsRouter);
 
 export default app;

@@ -11,7 +11,7 @@ const localConfigObject = {
   ssl: { rejectUnauthorized: false },
 };
 
-//Production DB configuration
+//Production DB configuration (Heroku host)
 const productionConfigObject = {
   connectionString: process.env.DATABASE_URL,
   ssl: { rejectUnauthorized: false },

@@ -6,10 +6,6 @@
   "scripts": {
     "start": "node ./bin/www.js",
     "dev": "nodemon -r dotenv/config ./bin/www.js",
-    "dbcreateuserstable": "node  -r dotenv/config ./db/scripts/users/createUsersTable.js",
-    "dbpopulateuserstable": "node -r dotenv/config ./db/scripts/users/populateUsersTable.js",
-    "dbemptyuserstable": "node -r dotenv/config ./db/scripts/users/emptyUsersTable.js",
-    "dbdeleteuserstable": "node -r dotenv/config ./db/scripts/users/deleteUsersTable.js",
     "dbcreateproductstable": "node  -r dotenv/config ./db/scripts/products/createProductsTable.js",
     "dbpopulateproductstable": "node -r dotenv/config ./db/scripts/products/populateProductsTable.js",
     "dbemptyproductstable": "node -r dotenv/config ./db/scripts/products/emptyProductsTable.js",
