@@ -87,3 +87,18 @@ function onListening() {
   const bind = typeof addr === 'string' ? 'pipe ' + addr : 'port ' + addr.port;
   debug('Listening on ' + bind);
 }
+
+//ERROR HANDLERS
+
+//Not found error (404)
+app.use(function (req, res, next) {
+  res
+    .status(404)
+    .json({ message: "We couldn't find what you were looking for." });
+});
+
+//Unauthorized error (401)
+app.use(function (err, req, res, next) {
+  console.error(err.stack);
+  res.status(401).json({ err });
+});
