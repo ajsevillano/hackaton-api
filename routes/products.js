@@ -1,9 +1,11 @@
 import express from 'express';
 const router = express.Router();
 import { getAllProducts, getMeals, getDrinks } from '../models/products.js';
+import { requiredScopes } from 'express-oauth2-jwt-bearer';
 
 // GET ALL USERS
-router.get(`/`, async function (req, res) {
+// User need read:products scope to see the info
+router.get(`/`, requiredScopes('read:products'), async function (req, res) {
   const result = await getAllProducts();
   res.json(result);
 });
